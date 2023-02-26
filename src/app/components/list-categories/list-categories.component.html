@@ -1,0 +1,21 @@
+<div class="row" id="categories">
+    <div class="col-12">
+        <div class="row" *ngIf="listCategories.length === 0">
+            <div class="col-12 text-center">
+                <span>{{ 'label.no.categories' | translate }}</span>
+            </div>
+        </div>
+
+        <div class="row" *ngIf="listCategories.length > 0">
+            <div 
+                class="col-md-4 col-sm-6 col-12 category" 
+                (click)="selectCategory(cat)" 
+                *ngFor="let cat of listCategories"
+                [routerLink]="['/list-products']"
+                >
+                <img [src]="cat.img" class="img-medium">
+                <span class="d-block">{{ cat.name | translate }}</span>
+            </div>
+        </div>
+    </div>
+</div>

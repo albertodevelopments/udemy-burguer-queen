@@ -1,0 +1,24 @@
+<div class="row" id="products">
+    <div class="col-12">
+        
+        <div class="row" *ngIf="listProducts.length === 0">
+            <div class="col-12 text-center">
+                <span>{{ 'label.no.product' | translate }}</span>
+            </div>
+        </div>
+
+        <div class="row" *ngIf="listProducts.length > 0">
+            <div 
+                class="col-md-4 col-sm-6 col-12 product" 
+                *ngFor="let product of listProducts"
+                (click)="selectProduct(product)"
+                [routerLink]="['/product']"
+                >
+                <img [src]="product.img" class="img-medium">
+                <span class="d-block">{{ product.name | translate }}</span>
+                <span class="d-block">{{ product.price }} €</span>
+            </div>
+        </div>
+    </div>
+</div>
+

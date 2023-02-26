@@ -1,0 +1,7 @@
+#header{
+    background: #2764a5;
+}
+
+#header .c-pointer{
+    cursor: pointer;
+}

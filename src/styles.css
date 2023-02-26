@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face{
+    font-family: 'insanibc';
+    src: url('assets/font/GreasySpoonNF.ttf') format('truetype');
+}
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+html body{
+    font-family: 'insanibc';
+    margin-top: 120px;
+    margin-bottom: 85px;
+}
+
+.spinner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-medium{
+    width: 300px;
+    height: 300px;
+}
+
+.img-large{
+    width: 500px;
+    height: 500px;
+}
+
+.img-small{
+    width: 150px;
+    height: 150px;
+}
+
+.my-modal-dialog .modal-dialog{
+    max-width: 95%;
+}
+
+.my-modal-dialog .no-elements{
+    font-size: 24px;
+    color: #999;
+}
+
